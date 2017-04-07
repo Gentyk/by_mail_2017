@@ -22,7 +22,8 @@ class Task:
 
 from typing import List
 class Roadmap:
-    tasks=List[Task]
+    t_tasks=List[Task]
+
     def __init__(self,tasks=[]):
         self.tasks=tasks
     def today(self):
@@ -32,16 +33,20 @@ class Roadmap:
                 tasks_new.append(t)
         return tasks_new
     def filter(self,state:str):
-        tasks_new = list[Task]
+        tasks_new = List[Task]
         for t in self.tasks:
             if t.state==state:
                 tasks_new.append(t)
         return tasks_new
 
 
-
-
-
+"""a=Task("1",datetime.datetime(2050,11,10))
+b=Task("2",datetime.datetime(1996,11,10))
+b.ready()
+c=[a,b]
+print(str(c[0].estimate))
+d=Roadmap(c)
+print(d.tasks[0].state)#"""
 
 
 
