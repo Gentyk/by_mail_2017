@@ -45,7 +45,7 @@ class Roadmap:
 
     @property
     def today(self):
-        tasks_new=List[Task]
+        tasks_new=[]
         for t in self.tasks:
             if t.estimate==datetime.today():
                 tasks_new.append(t)
@@ -54,7 +54,7 @@ class Roadmap:
     def filter(self,state:str):
         if type(state)!=str:
             raise TypeError("")
-        tasks_new = List[Task]
+        tasks_new = []
         for t in self.tasks:
             if t.state==state:
                 tasks_new.append(t)
