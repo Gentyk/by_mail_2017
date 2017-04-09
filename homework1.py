@@ -61,14 +61,17 @@ class Roadmap:
         return tasks_new
 
 
+"""
+#testing
 a=Task("1",datetime.date(2050,11,10))
 b=Task("2",datetime.date(1996,11,10))
 b.ready()
 c=[a,b]
+#by testing error:
 #c=[a,b,"dlllssdsd"]
-#print(str(c[0].estimate))
 d=Roadmap(c)
 print(d.tasks[1].state)
+"""
 
 
 
